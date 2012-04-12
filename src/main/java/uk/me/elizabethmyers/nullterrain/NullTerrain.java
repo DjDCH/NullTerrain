@@ -12,23 +12,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
 public class NullTerrain extends JavaPlugin
 {
-	private static Logger log = Logger.getLogger("Minecraft");
-
 	public void onDisable()
 	{
 	}
 
 	public void onEnable()
 	{
-		PluginDescriptionFile desc = this.getDescription();
-		Configuration config = getConfiguration();
-		Server serv = Bukkit.getServer();
-
-		log.info(desc.getName() + " version " + desc.getVersion() + " is enabled!");
 	}
 
 	@Override
