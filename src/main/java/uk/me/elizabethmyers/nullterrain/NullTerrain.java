@@ -16,7 +16,15 @@ public class NullTerrain extends JavaPlugin
 	@Override
 	public ChunkGenerator getDefaultWorldGenerator(String worldName, String id)
 	{
-		return new NullChunkGenerator();
+		boolean nofixedspawn = false;
+
+		if (id != null) {
+			if (id.contains("nofixedspawn")) {
+				nofixedspawn = true;
+			}
+		}
+
+		return new NullChunkGenerator(nofixedspawn);
 	}
 }
 
